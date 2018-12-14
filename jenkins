@@ -1,0 +1,522 @@
+To run a command as administrator (user "root"), use "sudo <command>".
+See "man sudo_root" for details.
+
+ubuntu@ip-172-31-80-225:~$ sudo -i
+root@ip-172-31-80-225:~# cd /var/lib/
+root@ip-172-31-80-225:/var/lib# ls
+AccountsService    dhcp             lxcfs      pam       sudo                     ureadahead
+amazon             dpkg             lxd        plymouth  systemd                  usbutils
+apt                git              man-db     polkit-1  ubuntu-release-upgrader  vim
+cloud              initramfs-tools  misc       private   ucf
+command-not-found  landscape        mlocate    python    update-manager
+dbus               logrotate        os-prober  snapd     update-notifier
+root@ip-172-31-80-225:/var/lib# java -version
+
+Command 'java' not found, but can be installed with:
+
+apt install default-jre
+apt install openjdk-11-jre-headless
+apt install openjdk-8-jre-headless
+
+root@ip-172-31-80-225:/var/lib# java --version
+
+Command 'java' not found, but can be installed with:
+
+apt install default-jre
+apt install openjdk-11-jre-headless
+apt install openjdk-8-jre-headless
+
+root@ip-172-31-80-225:/var/lib#
+root@ip-172-31-80-225:/var/lib#
+root@ip-172-31-80-225:/var/lib#
+root@ip-172-31-80-225:/var/lib# cd
+root@ip-172-31-80-225:~# clear
+root@ip-172-31-80-225:~# sudo -i
+root@ip-172-31-80-225:~# add-apt-repository ppa:webupd8team/java
+ Oracle Java (JDK) Installer (automatically downloads and installs Oracle JDK8). There are no actual Java files in this PPA.
+
+Important -> Why Oracle Java 7 And 6 Installers No Longer Work: http://www.webupd8.org/2017/06/why-oracle-java-7-and-6-installers-no.html
+
+Update: Oracle Java 9 has reached end of life: http://www.oracle.com/technetwork/java/javase/downloads/jdk9-downloads-3848520.html
+
+The PPA supports Ubuntu 18.10, 18.04, 16.04, 14.04 and 12.04.
+
+More info (and Ubuntu installation instructions):
+- http://www.webupd8.org/2012/09/install-oracle-java-8-in-ubuntu-via-ppa.html
+
+Debian installation instructions:
+- Oracle Java 8: http://www.webupd8.org/2014/03/how-to-install-oracle-java-8-in-debian.html
+
+For Oracle Java 11, see a different PPA -> https://www.linuxuprising.com/2018/10/how-to-install-oracle-java-11-in-ubuntu.html
+ More info: https://launchpad.net/~webupd8team/+archive/ubuntu/java
+Press [ENTER] to continue or Ctrl-c to cancel adding it.
+
+Hit:1 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic InRelease
+Get:2 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic-updates InRelease [88.7 kB]
+Get:3 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic-backports InRelease [74.6 kB]
+Get:4 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic/main Sources [829 kB]
+Get:5 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic/universe Sources [9051 kB]
+Get:6 http://security.ubuntu.com/ubuntu bionic-security InRelease [83.2 kB]
+Get:7 http://ppa.launchpad.net/webupd8team/java/ubuntu bionic InRelease [15.4 kB]
+Get:8 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic/restricted Sources [5324 B]
+Get:9 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic/multiverse Sources [181 kB]
+Get:10 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic/universe amd64 Packages [8570 kB]
+Get:11 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic/universe Translation-en [4941 kB]
+Get:12 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic/multiverse amd64 Packages [151 kB]
+Get:13 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic/multiverse Translation-en [108 kB]
+Get:14 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic-updates/universe Sources [108 kB]
+Get:15 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic-updates/main Sources [221 kB]
+Get:16 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic-updates/restricted Sources [2064 B]
+Get:17 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic-updates/multiverse Sources [3824 B]
+Get:18 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic-updates/main amd64 Packages [460 kB]
+Get:19 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic-updates/main Translation-en [172 kB]
+Get:20 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic-updates/restricted amd64 Packages [6992 B]
+Get:21 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic-updates/restricted Translation-en [3076 B]
+Get:22 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic-updates/universe amd64 Packages [595 kB]
+Get:23 http://ppa.launchpad.net/webupd8team/java/ubuntu bionic/main amd64 Packages [1556 B]
+Get:24 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic-updates/universe Translation-en [167 kB]
+Get:25 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic-updates/multiverse amd64 Packages [6372 B]
+Get:26 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic-updates/multiverse Translation-en [3356 B]
+Get:27 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic-backports/universe Sources [2068 B]
+Get:28 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic-backports/universe amd64 Packages [3468 B]
+Get:29 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic-backports/universe Translation-en [1604 B]
+Get:30 http://security.ubuntu.com/ubuntu bionic-security/universe Sources [28.2 kB]
+Get:31 http://ppa.launchpad.net/webupd8team/java/ubuntu bionic/main Translation-en [928 B]
+Get:32 http://security.ubuntu.com/ubuntu bionic-security/main Sources [65.1 kB]
+Get:33 http://security.ubuntu.com/ubuntu bionic-security/multiverse Sources [1336 B]
+Get:34 http://security.ubuntu.com/ubuntu bionic-security/main amd64 Packages [221 kB]
+Get:35 http://security.ubuntu.com/ubuntu bionic-security/main Translation-en [85.0 kB]
+Get:36 http://security.ubuntu.com/ubuntu bionic-security/universe amd64 Packages [108 kB]
+Get:37 http://security.ubuntu.com/ubuntu bionic-security/universe Translation-en [61.4 kB]
+Get:38 http://security.ubuntu.com/ubuntu bionic-security/multiverse amd64 Packages [1440 B]
+Get:39 http://security.ubuntu.com/ubuntu bionic-security/multiverse Translation-en [996 B]
+Fetched 26.4 MB in 5s (5325 kB/s)
+Reading package lists... Done
+root@ip-172-31-80-225:~# apt-get update
+Hit:1 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic InRelease
+Hit:2 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic-updates InRelease
+Hit:3 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic-backports InRelease
+Hit:4 http://security.ubuntu.com/ubuntu bionic-security InRelease
+Hit:5 http://ppa.launchpad.net/webupd8team/java/ubuntu bionic InRelease
+Reading package lists... Done
+root@ip-172-31-80-225:~# apt-get install oracle-java8-installer
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+The following additional packages will be installed:
+  binutils binutils-common binutils-x86-64-linux-gnu gsfonts gsfonts-x11 java-common libbinutils
+  libfontenc1 oracle-java8-set-default x11-common xfonts-encodings xfonts-utils
+Suggested packages:
+  binutils-doc binfmt-support visualvm ttf-baekmuk | ttf-unfonts | ttf-unfonts-core
+  ttf-kochi-gothic | ttf-sazanami-gothic ttf-kochi-mincho | ttf-sazanami-mincho ttf-arphic-uming
+  firefox | firefox-2 | iceweasel | mozilla-firefox | iceape-browser | mozilla-browser
+  | epiphany-gecko | epiphany-webkit | epiphany-browser | galeon | midbrowser | moblin-web-browser
+  | xulrunner | xulrunner-1.9 | konqueror | chromium-browser | midori | google-chrome
+The following NEW packages will be installed:
+  binutils binutils-common binutils-x86-64-linux-gnu gsfonts gsfonts-x11 java-common libbinutils
+  libfontenc1 oracle-java8-installer oracle-java8-set-default x11-common xfonts-encodings
+  xfonts-utils
+0 upgraded, 13 newly installed, 0 to remove and 119 not upgraded.
+Need to get 6430 kB of archives.
+After this operation, 22.0 MB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Get:1 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic-updates/main amd64 binutils-common amd64 2.30-21ubuntu1~18.04 [193 kB]
+Get:2 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libbinutils amd64 2.30-21ubuntu1~18.04 [502 kB]
+Get:3 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic-updates/main amd64 binutils-x86-64-linux-gnu amd64 2.30-21ubuntu1~18.04 [1855 kB]
+Get:4 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic-updates/main amd64 binutils amd64 2.30-21ubuntu1~18.04 [3392 B]
+Get:5 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic/main amd64 java-common all 0.63ubuntu1~02 [7032 B]
+Get:6 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic/main amd64 gsfonts all 1:8.11+urwcyr1.0.7~pre44-4.4 [3120 kB]
+Get:7 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic/main amd64 libfontenc1 amd64 1:1.1.3-1 [13.9 kB]
+Get:8 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic-updates/main amd64 x11-common all 1:7.7+19ubuntu7.1 [22.5 kB]
+Get:9 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic/main amd64 xfonts-encodings all 1:1.0.4-2 [573 kB]
+Get:10 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic/main amd64 xfonts-utils amd64 1:7.7+6 [91.5 kB]
+Get:11 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic/universe amd64 gsfonts-x11 all 0.25 [7264 B]
+Get:12 http://ppa.launchpad.net/webupd8team/java/ubuntu bionic/main amd64 oracle-java8-installer all 8u191-1~webupd8~1 [33.1 kB]
+Get:13 http://ppa.launchpad.net/webupd8team/java/ubuntu bionic/main amd64 oracle-java8-set-default all 8u191-1~webupd8~1 [6968 B]
+Fetched 6430 kB in 0s (14.0 MB/s)
+Preconfiguring packages ...
+Selecting previously unselected package binutils-common:amd64.
+(Reading database ... 56473 files and directories currently installed.)
+Preparing to unpack .../binutils-common_2.30-21ubuntu1~18.04_amd64.deb ...
+Unpacking binutils-common:amd64 (2.30-21ubuntu1~18.04) ...
+Selecting previously unselected package libbinutils:amd64.
+Preparing to unpack .../libbinutils_2.30-21ubuntu1~18.04_amd64.deb ...
+Unpacking libbinutils:amd64 (2.30-21ubuntu1~18.04) ...
+Selecting previously unselected package binutils-x86-64-linux-gnu.
+Preparing to unpack .../binutils-x86-64-linux-gnu_2.30-21ubuntu1~18.04_amd64.deb ...
+Unpacking binutils-x86-64-linux-gnu (2.30-21ubuntu1~18.04) ...
+Selecting previously unselected package binutils.
+Preparing to unpack .../binutils_2.30-21ubuntu1~18.04_amd64.deb ...
+Unpacking binutils (2.30-21ubuntu1~18.04) ...
+Selecting previously unselected package java-common.
+Preparing to unpack .../java-common_0.63ubuntu1~02_all.deb ...
+Unpacking java-common (0.63ubuntu1~02) ...
+Setting up binutils-common:amd64 (2.30-21ubuntu1~18.04) ...
+Setting up libbinutils:amd64 (2.30-21ubuntu1~18.04) ...
+Setting up binutils-x86-64-linux-gnu (2.30-21ubuntu1~18.04) ...
+Setting up binutils (2.30-21ubuntu1~18.04) ...
+Selecting previously unselected package oracle-java8-installer.
+(Reading database ... 56744 files and directories currently installed.)
+Preparing to unpack .../oracle-java8-installer_8u191-1~webupd8~1_all.deb ...
+Unpacking oracle-java8-installer (8u191-1~webupd8~1) ...
+Setting up java-common (0.63ubuntu1~02) ...
+Setting up oracle-java8-installer (8u191-1~webupd8~1) ...
+No /var/cache/oracle-jdk8-installer/wgetrc file found.
+Creating /var/cache/oracle-jdk8-installer/wgetrc and
+using default oracle-java8-installer wgetrc settings for it.
+Downloading Oracle Java 8...
+--2018-12-14 10:38:57--  http://download.oracle.com/otn-pub/java/jdk/8u191-b12/2787e4a523244c269598db4e85c51e0c/jdk-8u191-linux-x64.tar.gz
+Resolving download.oracle.com (download.oracle.com)... 23.52.164.194
+Connecting to download.oracle.com (download.oracle.com)|23.52.164.194|:80... connected.
+HTTP request sent, awaiting response... 302 Moved Temporarily
+Location: https://edelivery.oracle.com/otn-pub/java/jdk/8u191-b12/2787e4a523244c269598db4e85c51e0c/jdk-8u191-linux-x64.tar.gz [following]
+--2018-12-14 10:38:57--  https://edelivery.oracle.com/otn-pub/java/jdk/8u191-b12/2787e4a523244c269598db4e85c51e0c/jdk-8u191-linux-x64.tar.gz
+Resolving edelivery.oracle.com (edelivery.oracle.com)... 104.119.18.128, 2600:1408:a800:1b6::2d3e, 2600:1408:a800:198::2d3e
+Connecting to edelivery.oracle.com (edelivery.oracle.com)|104.119.18.128|:443... connected.
+HTTP request sent, awaiting response... 302 Moved Temporarily
+Location: http://download.oracle.com/otn-pub/java/jdk/8u191-b12/2787e4a523244c269598db4e85c51e0c/jdk-8u191-linux-x64.tar.gz?AuthParam=1544784057_4396318f789869e0fd2de081bcd6d574 [following]
+--2018-12-14 10:38:57--  http://download.oracle.com/otn-pub/java/jdk/8u191-b12/2787e4a523244c269598db4e85c51e0c/jdk-8u191-linux-x64.tar.gz?AuthParam=1544784057_4396318f789869e0fd2de081bcd6d574
+Connecting to download.oracle.com (download.oracle.com)|23.52.164.194|:80... connected.
+HTTP request sent, awaiting response... 301 Moved Permanently
+Location: https://download.oracle.com/otn-pub/java/jdk/8u191-b12/2787e4a523244c269598db4e85c51e0c/jdk-8u191-linux-x64.tar.gz?AuthParam=1544784057_4396318f789869e0fd2de081bcd6d574 [following]
+--2018-12-14 10:38:57--  https://download.oracle.com/otn-pub/java/jdk/8u191-b12/2787e4a523244c269598db4e85c51e0c/jdk-8u191-linux-x64.tar.gz?AuthParam=1544784057_4396318f789869e0fd2de081bcd6d574
+Connecting to download.oracle.com (download.oracle.com)|23.52.164.194|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 191753373 (183M) [application/x-gzip]
+Saving to: ‘jdk-8u191-linux-x64.tar.gz’
+
+     0K ........ ........ ........ ........ ........ ........  1% 48.2M 4s
+  3072K ........ ........ ........ ........ ........ ........  3% 85.9M 3s
+  6144K ........ ........ ........ ........ ........ ........  4% 90.9M 3s
+  9216K ........ ........ ........ ........ ........ ........  6% 14.6M 5s
+ 12288K ........ ........ ........ ........ ........ ........  8% 9.10M 7s
+ 15360K ........ ........ ........ ........ ........ ........  9% 90.7M 6s
+ 18432K ........ ........ ........ ........ ........ ........ 11% 9.07M 8s
+ 21504K ........ ........ ........ ........ ........ ........ 13% 87.9M 7s
+ 24576K ........ ........ ........ ........ ........ ........ 14% 91.5M 6s
+ 27648K ........ ........ ........ ........ ........ ........ 16% 63.5M 6s
+ 30720K ........ ........ ........ ........ ........ ........ 18% 73.8M 5s
+ 33792K ........ ........ ........ ........ ........ ........ 19% 8.97M 6s
+ 36864K ........ ........ ........ ........ ........ ........ 21% 62.5M 6s
+ 39936K ........ ........ ........ ........ ........ ........ 22% 8.94M 6s
+ 43008K ........ ........ ........ ........ ........ ........ 24% 87.0M 6s
+ 46080K ........ ........ ........ ........ ........ ........ 26% 91.2M 6s
+ 49152K ........ ........ ........ ........ ........ ........ 27% 90.1M 5s
+ 52224K ........ ........ ........ ........ ........ ........ 29% 7.04M 6s
+ 55296K ........ ........ ........ ........ ........ ........ 31% 9.10M 6s
+ 58368K ........ ........ ........ ........ ........ ........ 32% 89.1M 6s
+ 61440K ........ ........ ........ ........ ........ ........ 34% 90.0M 5s
+ 64512K ........ ........ ........ ........ ........ ........ 36% 91.5M 5s
+ 67584K ........ ........ ........ ........ ........ ........ 37% 90.3M 5s
+ 70656K ........ ........ ........ ........ ........ ........ 39% 91.5M 5s
+ 73728K ........ ........ ........ ........ ........ ........ 41% 89.5M 4s
+ 76800K ........ ........ ........ ........ ........ ........ 42% 91.1M 4s
+ 79872K ........ ........ ........ ........ ........ ........ 44% 92.8M 4s
+ 82944K ........ ........ ........ ........ ........ ........ 45% 91.4M 4s
+ 86016K ........ ........ ........ ........ ........ ........ 47% 14.5M 4s
+ 89088K ........ ........ ........ ........ ........ ........ 49% 92.6M 3s
+ 92160K ........ ........ ........ ........ ........ ........ 50% 9.00M 4s
+ 95232K ........ ........ ........ ........ ........ ........ 52% 89.3M 3s
+ 98304K ........ ........ ........ ........ ........ ........ 54% 61.0M 3s
+101376K ........ ........ ........ ........ ........ ........ 55% 9.00M 3s
+104448K ........ ........ ........ ........ ........ ........ 57% 62.3M 3s
+107520K ........ ........ ........ ........ ........ ........ 59% 88.7M 3s
+110592K ........ ........ ........ ........ ........ ........ 60% 84.8M 3s
+113664K ........ ........ ........ ........ ........ ........ 62% 8.75M 3s
+116736K ........ ........ ........ ........ ........ ........ 63% 85.1M 3s
+119808K ........ ........ ........ ........ ........ ........ 65% 9.09M 3s
+122880K ........ ........ ........ ........ ........ ........ 67% 9.06M 3s
+125952K ........ ........ ........ ........ ........ ........ 68% 88.3M 2s
+129024K ........ ........ ........ ........ ........ ........ 70% 57.8M 2s
+132096K ........ ........ ........ ........ ........ ........ 72% 8.14M 2s
+135168K ........ ........ ........ ........ ........ ........ 73% 89.0M 2s
+138240K ........ ........ ........ ........ ........ ........ 75% 88.1M 2s
+141312K ........ ........ ........ ........ ........ ........ 77% 87.9M 2s
+144384K ........ ........ ........ ........ ........ ........ 78% 77.7M 2s
+147456K ........ ........ ........ ........ ........ ........ 80% 8.87M 1s
+150528K ........ ........ ........ ........ ........ ........ 82% 9.08M 1s
+153600K ........ ........ ........ ........ ........ ........ 83% 89.2M 1s
+156672K ........ ........ ........ ........ ........ ........ 85% 63.1M 1s
+159744K ........ ........ ........ ........ ........ ........ 86% 9.11M 1s
+162816K ........ ........ ........ ........ ........ ........ 88% 87.1M 1s
+165888K ........ ........ ........ ........ ........ ........ 90% 7.48M 1s
+168960K ........ ........ ........ ........ ........ ........ 91% 15.1M 1s
+172032K ........ ........ ........ ........ ........ ........ 93% 62.0M 1s
+175104K ........ ........ ........ ........ ........ ........ 95% 87.6M 0s
+178176K ........ ........ ........ ........ ........ ........ 96% 8.65M 0s
+181248K ........ ........ ........ ........ ........ ........ 98% 89.5M 0s
+184320K ........ ........ ........ ........ ........ .....   100% 87.6M=8.0s
+
+2018-12-14 10:39:05 (22.8 MB/s) - ‘jdk-8u191-linux-x64.tar.gz’ saved [191753373/191753373]
+
+Download done.
+Removing outdated cached downloads...
+update-alternatives: error: no alternatives for java
+update-alternatives: using /usr/lib/jvm/java-8-oracle/jre/bin/ControlPanel to provide /usr/bin/ControlPanel (ControlPanel) in auto mode
+update-alternatives: using /usr/lib/jvm/java-8-oracle/jre/bin/java to provide /usr/bin/java (java) in auto mode
+update-alternatives: using /usr/lib/jvm/java-8-oracle/jre/bin/javaws to provide /usr/bin/javaws (javaws) in auto mode
+update-alternatives: using /usr/lib/jvm/java-8-oracle/jre/bin/jcontrol to provide /usr/bin/jcontrol (jcontrol) in auto mode
+update-alternatives: using /usr/lib/jvm/java-8-oracle/jre/bin/jjs to provide /usr/bin/jjs (jjs) in auto mode
+update-alternatives: using /usr/lib/jvm/java-8-oracle/jre/bin/keytool to provide /usr/bin/keytool (keytool) in auto mode
+update-alternatives: using /usr/lib/jvm/java-8-oracle/jre/bin/orbd to provide /usr/bin/orbd (orbd) in auto mode
+update-alternatives: using /usr/lib/jvm/java-8-oracle/jre/bin/pack200 to provide /usr/bin/pack200 (pack200) in auto mode
+update-alternatives: using /usr/lib/jvm/java-8-oracle/jre/bin/policytool to provide /usr/bin/policytool (policytool) in auto mode
+update-alternatives: using /usr/lib/jvm/java-8-oracle/jre/bin/rmid to provide /usr/bin/rmid (rmid) in auto mode
+update-alternatives: using /usr/lib/jvm/java-8-oracle/jre/bin/rmiregistry to provide /usr/bin/rmiregistry (rmiregistry) in auto mode
+update-alternatives: using /usr/lib/jvm/java-8-oracle/jre/bin/servertool to provide /usr/bin/servertool (servertool) in auto mode
+update-alternatives: using /usr/lib/jvm/java-8-oracle/jre/bin/tnameserv to provide /usr/bin/tnameserv (tnameserv) in auto mode
+update-alternatives: using /usr/lib/jvm/java-8-oracle/jre/bin/unpack200 to provide /usr/bin/unpack200 (unpack200) in auto mode
+update-alternatives: using /usr/lib/jvm/java-8-oracle/jre/lib/jexec to provide /usr/bin/jexec (jexec) in auto mode
+update-alternatives: using /usr/lib/jvm/java-8-oracle/bin/appletviewer to provide /usr/bin/appletviewer (appletviewer) in auto mode
+update-alternatives: using /usr/lib/jvm/java-8-oracle/bin/extcheck to provide /usr/bin/extcheck (extcheck) in auto mode
+update-alternatives: using /usr/lib/jvm/java-8-oracle/bin/idlj to provide /usr/bin/idlj (idlj) in auto mode
+update-alternatives: using /usr/lib/jvm/java-8-oracle/bin/jar to provide /usr/bin/jar (jar) in auto mode
+update-alternatives: using /usr/lib/jvm/java-8-oracle/bin/jarsigner to provide /usr/bin/jarsigner (jarsigner) in auto mode
+update-alternatives: using /usr/lib/jvm/java-8-oracle/bin/javac to provide /usr/bin/javac (javac) in auto mode
+update-alternatives: using /usr/lib/jvm/java-8-oracle/bin/javadoc to provide /usr/bin/javadoc (javadoc) in auto mode
+update-alternatives: using /usr/lib/jvm/java-8-oracle/bin/javafxpackager to provide /usr/bin/javafxpackager (javafxpackager) in auto mode
+update-alternatives: using /usr/lib/jvm/java-8-oracle/bin/javah to provide /usr/bin/javah (javah) in auto mode
+update-alternatives: using /usr/lib/jvm/java-8-oracle/bin/javap to provide /usr/bin/javap (javap) in auto mode
+update-alternatives: using /usr/lib/jvm/java-8-oracle/bin/javapackager to provide /usr/bin/javapackager (javapackager) in auto mode
+update-alternatives: using /usr/lib/jvm/java-8-oracle/bin/jcmd to provide /usr/bin/jcmd (jcmd) in auto mode
+update-alternatives: using /usr/lib/jvm/java-8-oracle/bin/jconsole to provide /usr/bin/jconsole (jconsole) in auto mode
+update-alternatives: using /usr/lib/jvm/java-8-oracle/bin/jdb to provide /usr/bin/jdb (jdb) in auto mode
+update-alternatives: using /usr/lib/jvm/java-8-oracle/bin/jdeps to provide /usr/bin/jdeps (jdeps) in auto mode
+update-alternatives: using /usr/lib/jvm/java-8-oracle/bin/jhat to provide /usr/bin/jhat (jhat) in auto mode
+update-alternatives: using /usr/lib/jvm/java-8-oracle/bin/jinfo to provide /usr/bin/jinfo (jinfo) in auto mode
+update-alternatives: using /usr/lib/jvm/java-8-oracle/bin/jmap to provide /usr/bin/jmap (jmap) in auto mode
+update-alternatives: using /usr/lib/jvm/java-8-oracle/bin/jmc to provide /usr/bin/jmc (jmc) in auto mode
+update-alternatives: using /usr/lib/jvm/java-8-oracle/bin/jps to provide /usr/bin/jps (jps) in auto mode
+update-alternatives: using /usr/lib/jvm/java-8-oracle/bin/jrunscript to provide /usr/bin/jrunscript (jrunscript) in auto mode
+update-alternatives: using /usr/lib/jvm/java-8-oracle/bin/jsadebugd to provide /usr/bin/jsadebugd (jsadebugd) in auto mode
+update-alternatives: using /usr/lib/jvm/java-8-oracle/bin/jstack to provide /usr/bin/jstack (jstack) in auto mode
+update-alternatives: using /usr/lib/jvm/java-8-oracle/bin/jstat to provide /usr/bin/jstat (jstat) in auto mode
+update-alternatives: using /usr/lib/jvm/java-8-oracle/bin/jstatd to provide /usr/bin/jstatd (jstatd) in auto mode
+update-alternatives: using /usr/lib/jvm/java-8-oracle/bin/jvisualvm to provide /usr/bin/jvisualvm (jvisualvm) in auto mode
+update-alternatives: using /usr/lib/jvm/java-8-oracle/bin/native2ascii to provide /usr/bin/native2ascii (native2ascii) in auto mode
+update-alternatives: using /usr/lib/jvm/java-8-oracle/bin/rmic to provide /usr/bin/rmic (rmic) in auto mode
+update-alternatives: using /usr/lib/jvm/java-8-oracle/bin/schemagen to provide /usr/bin/schemagen (schemagen) in auto mode
+update-alternatives: using /usr/lib/jvm/java-8-oracle/bin/serialver to provide /usr/bin/serialver (serialver) in auto mode
+update-alternatives: using /usr/lib/jvm/java-8-oracle/bin/wsgen to provide /usr/bin/wsgen (wsgen) in auto mode
+update-alternatives: using /usr/lib/jvm/java-8-oracle/bin/wsimport to provide /usr/bin/wsimport (wsimport) in auto mode
+update-alternatives: using /usr/lib/jvm/java-8-oracle/bin/xjc to provide /usr/bin/xjc (xjc) in auto mode
+update-alternatives: using /usr/lib/jvm/java-8-oracle/jre/lib/amd64/libnpjp2.so to provide /usr/lib/mozilla/plugins/libjavaplugin.so (mozilla-javaplugin.so) in auto mode
+Oracle JDK 8 installed
+
+#####Important########
+To set Oracle JDK8 as default, install the "oracle-java8-set-default" package.
+E.g.: sudo apt install oracle-java8-set-default
+On Ubuntu systems, oracle-java8-set-default is most probably installed
+automatically with this package.
+######################
+
+Selecting previously unselected package oracle-java8-set-default.
+(Reading database ... 56783 files and directories currently installed.)
+Preparing to unpack .../0-oracle-java8-set-default_8u191-1~webupd8~1_all.deb ...
+Unpacking oracle-java8-set-default (8u191-1~webupd8~1) ...
+Selecting previously unselected package gsfonts.
+Preparing to unpack .../1-gsfonts_1%3a8.11+urwcyr1.0.7~pre44-4.4_all.deb ...
+Unpacking gsfonts (1:8.11+urwcyr1.0.7~pre44-4.4) ...
+Selecting previously unselected package libfontenc1:amd64.
+Preparing to unpack .../2-libfontenc1_1%3a1.1.3-1_amd64.deb ...
+Unpacking libfontenc1:amd64 (1:1.1.3-1) ...
+Selecting previously unselected package x11-common.
+Preparing to unpack .../3-x11-common_1%3a7.7+19ubuntu7.1_all.deb ...
+dpkg-query: no packages found matching nux-tools
+Unpacking x11-common (1:7.7+19ubuntu7.1) ...
+Selecting previously unselected package xfonts-encodings.
+Preparing to unpack .../4-xfonts-encodings_1%3a1.0.4-2_all.deb ...
+Unpacking xfonts-encodings (1:1.0.4-2) ...
+Selecting previously unselected package xfonts-utils.
+Preparing to unpack .../5-xfonts-utils_1%3a7.7+6_amd64.deb ...
+Unpacking xfonts-utils (1:7.7+6) ...
+Selecting previously unselected package gsfonts-x11.
+Preparing to unpack .../6-gsfonts-x11_0.25_all.deb ...
+Unpacking gsfonts-x11 (0.25) ...
+Processing triggers for mime-support (3.60ubuntu1) ...
+Processing triggers for ureadahead (0.100.0-20) ...
+Setting up gsfonts (1:8.11+urwcyr1.0.7~pre44-4.4) ...
+Setting up oracle-java8-set-default (8u191-1~webupd8~1) ...
+Processing triggers for libc-bin (2.27-3ubuntu1) ...
+Processing triggers for systemd (237-3ubuntu10.3) ...
+Setting up libfontenc1:amd64 (1:1.1.3-1) ...
+Processing triggers for man-db (2.8.3-2) ...
+Processing triggers for shared-mime-info (1.9-2) ...
+Setting up x11-common (1:7.7+19ubuntu7.1) ...
+update-rc.d: warning: start and stop actions are no longer supported; falling back to defaults
+Setting up xfonts-encodings (1:1.0.4-2) ...
+Setting up xfonts-utils (1:7.7+6) ...
+Setting up gsfonts-x11 (0.25) ...
+Processing triggers for libc-bin (2.27-3ubuntu1) ...
+Processing triggers for ureadahead (0.100.0-20) ...
+Processing triggers for systemd (237-3ubuntu10.3) ...
+root@ip-172-31-80-225:~# update-alternatives --config java
+There is 1 choice for the alternative java (providing /usr/bin/java).
+
+  Selection    Path                                     Priority   Status
+------------------------------------------------------------
+  0            /usr/lib/jvm/java-8-oracle/jre/bin/java   1081      auto mode
+* 1            /usr/lib/jvm/java-8-oracle/jre/bin/java   1081      manual mode
+
+Press <enter> to keep the current choice[*], or type selection number:
+root@ip-172-31-80-225:~# cat>>/etc/environment
+JAVA_HOME="/usr/lib/jvm/java-8-oracle"
+root@ip-172-31-80-225:~# source /etc/environment
+root@ip-172-31-80-225:~# wget -q -O - https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo apt-key add -
+OK
+root@ip-172-31-80-225:~# sh -c 'echo deb http://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
+root@ip-172-31-80-225:~# sudo apt-get update
+Hit:1 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic InRelease
+Hit:2 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic-updates InRelease
+Hit:3 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic-backports InRelease
+Ign:4 http://pkg.jenkins.io/debian-stable binary/ InRelease
+Get:5 http://pkg.jenkins.io/debian-stable binary/ Release [2042 B]
+Get:6 http://pkg.jenkins.io/debian-stable binary/ Release.gpg [181 B]
+Hit:7 http://ppa.launchpad.net/webupd8team/java/ubuntu bionic InRelease
+Hit:8 http://security.ubuntu.com/ubuntu bionic-security InRelease
+Get:9 http://pkg.jenkins.io/debian-stable binary/ Packages [14.0 kB]
+Fetched 16.2 kB in 0s (36.2 kB/s)
+Reading package lists... Done
+root@ip-172-31-80-225:~# wget https://pkg.jenkins.io/debian-stable/binary/jenkins_2.138.1_all.deb
+--2018-12-14 10:42:01--  https://pkg.jenkins.io/debian-stable/binary/jenkins_2.138.1_all.deb
+Resolving pkg.jenkins.io (pkg.jenkins.io)... 52.202.51.185
+Connecting to pkg.jenkins.io (pkg.jenkins.io)|52.202.51.185|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://prodjenkinsreleases.blob.core.windows.net/debian-stable/jenkins_2.138.1_all.deb [following]
+--2018-12-14 10:42:01--  https://prodjenkinsreleases.blob.core.windows.net/debian-stable/jenkins_2.138.1_all.deb
+Resolving prodjenkinsreleases.blob.core.windows.net (prodjenkinsreleases.blob.core.windows.net)... 104.208.128.30
+Connecting to prodjenkinsreleases.blob.core.windows.net (prodjenkinsreleases.blob.core.windows.net)|104.208.128.30|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 73571648 (70M) [application/x-debian-package]
+Saving to: ‘jenkins_2.138.1_all.deb’
+
+jenkins_2.138.1_all.deb   100%[==================================>]  70.16M  20.4MB/s    in 3.4s
+
+2018-12-14 10:42:05 (20.4 MB/s) - ‘jenkins_2.138.1_all.deb’ saved [73571648/73571648]
+
+root@ip-172-31-80-225:~# sudo apt-get install jenkins
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+The following additional packages will be installed:
+  daemon
+The following NEW packages will be installed:
+  daemon jenkins
+0 upgraded, 2 newly installed, 0 to remove and 119 not upgraded.
+Need to get 75.1 MB of archives.
+After this operation, 76.3 MB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Get:2 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic/universe amd64 daemon amd64 0.6.4-1build1 [99.5 kB]
+Get:1 http://pkg.jenkins.io/debian-stable binary/ jenkins 2.150.1 [75.0 MB]
+Fetched 75.1 MB in 6s (12.2 MB/s)
+Selecting previously unselected package daemon.
+(Reading database ... 57082 files and directories currently installed.)
+Preparing to unpack .../daemon_0.6.4-1build1_amd64.deb ...
+Unpacking daemon (0.6.4-1build1) ...
+Selecting previously unselected package jenkins.
+Preparing to unpack .../jenkins_2.150.1_all.deb ...
+Unpacking jenkins (2.150.1) ...
+Processing triggers for ureadahead (0.100.0-20) ...
+Processing triggers for systemd (237-3ubuntu10.3) ...
+Processing triggers for man-db (2.8.3-2) ...
+Setting up daemon (0.6.4-1build1) ...
+Setting up jenkins (2.150.1) ...
+Processing triggers for ureadahead (0.100.0-20) ...
+Processing triggers for systemd (237-3ubuntu10.3) ...
+root@ip-172-31-80-225:~# service jenkins status
+● jenkins.service - LSB: Start Jenkins at boot time
+   Loaded: loaded (/etc/init.d/jenkins; generated)
+   Active: active (exited) since Fri 2018-12-14 10:42:23 UTC; 38s ago
+     Docs: man:systemd-sysv-generator(8)
+    Tasks: 0 (limit: 1152)
+   CGroup: /system.slice/jenkins.service
+
+Dec 14 10:42:22 ip-172-31-80-225 systemd[1]: Starting LSB: Start Jenkins at boot time...
+Dec 14 10:42:22 ip-172-31-80-225 jenkins[15053]: Correct java version found
+Dec 14 10:42:22 ip-172-31-80-225 jenkins[15053]:  * Starting Jenkins Automation Server jenkins
+Dec 14 10:42:22 ip-172-31-80-225 su[15099]: Successful su for jenkins by root
+Dec 14 10:42:22 ip-172-31-80-225 su[15099]: + ??? root:jenkins
+Dec 14 10:42:22 ip-172-31-80-225 su[15099]: pam_unix(su:session): session opened for user jenkins by
+Dec 14 10:42:22 ip-172-31-80-225 su[15099]: pam_unix(su:session): session closed for user jenkins
+Dec 14 10:42:23 ip-172-31-80-225 jenkins[15053]:    ...done.
+Dec 14 10:42:23 ip-172-31-80-225 systemd[1]: Started LSB: Start Jenkins at boot time.
+lines 1-16/16 (END)
+root@ip-172-31-80-225:~# service jenkins start
+root@ip-172-31-80-225:~# apt-get install git
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+Suggested packages:
+  git-daemon-run | git-daemon-sysvinit git-doc git-el git-email git-gui gitk gitweb git-cvs
+  git-mediawiki git-svn
+The following packages will be upgraded:
+  git
+1 upgraded, 0 newly installed, 0 to remove and 118 not upgraded.
+Need to get 3907 kB of archives.
+After this operation, 20.5 kB of additional disk space will be used.
+Get:1 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic-updates/main amd64 git amd64 1:2.17.1-1ubuntu0.4 [3907 kB]
+Fetched 3907 kB in 0s (48.4 MB/s)
+(Reading database ... 57101 files and directories currently installed.)
+Preparing to unpack .../git_1%3a2.17.1-1ubuntu0.4_amd64.deb ...
+Unpacking git (1:2.17.1-1ubuntu0.4) over (1:2.17.1-1ubuntu0.1) ...
+Setting up git (1:2.17.1-1ubuntu0.4) ...
+root@ip-172-31-80-225:~# apt-get update
+Hit:1 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic InRelease
+Hit:2 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic-updates InRelease
+Hit:3 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic-backports InRelease
+Ign:4 http://pkg.jenkins.io/debian-stable binary/ InRelease
+Hit:5 http://pkg.jenkins.io/debian-stable binary/ Release
+Hit:6 http://security.ubuntu.com/ubuntu bionic-security InRelease
+Hit:7 http://ppa.launchpad.net/webupd8team/java/ubuntu bionic InRelease
+Reading package lists... Done
+root@ip-172-31-80-225:~#
+─────────────────────────────────────────────────────────────────────────────────────────────────────
+
+Session stopped
+    - Press <return> to exit tab
+    - Press R to restart session
+    - Press S to save terminal output to file
+
+Network error: Software caused connection abort
+Authenticating with public key "imported-openssh-key"
+     ┌────────────────────────────────────────────────────────────────────┐
+     │                        • MobaXterm 11.0 •                          │
+     │            (SSH client, X-server and networking tools)             │
+     │                                                                    │
+     │ ➤ SSH session to ubuntu@18.206.121.42                              │
+     │   • SSH compression : ✔                                            │
+     │   • SSH-browser     : ✔                                            │
+     │   • X11-forwarding  : ✔  (remote display is forwarded through SSH) │
+     │   • DISPLAY         : ✔  (automatically set on remote server)      │
+     │                                                                    │
+     │ ➤ For more info, ctrl+click on help or visit our website           │
+     └────────────────────────────────────────────────────────────────────┘
+
+Welcome to Ubuntu 18.04.1 LTS (GNU/Linux 4.15.0-1021-aws x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Fri Dec 14 10:49:28 UTC 2018
+
+  System load:  0.03              Processes:           100
+  Usage of /:   27.3% of 7.69GB   Users logged in:     1
+  Memory usage: 39%               IP address for eth0: 172.31.80.225
+  Swap usage:   0%
+
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+123 packages can be updated.
+48 updates are security updates.
+
+
+Last login: Fri Dec 14 10:35:11 2018 from 124.123.84.246
+ubuntu@ip-172-31-80-225:~$ sudo -i
+root@ip-172-31-80-225:~# cat /var/lib/jenkins/secrets/initialAdminPassword
+861c05af1ee64522a1e5c7f17a82562d
+root@ip-172-31-80-225:~#
+root@ip-172-31-80-225:~# ^C
+root@ip-172-31-80-225:~#
