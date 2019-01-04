@@ -1,4 +1,16 @@
 # jenkins
+
+USED PLUGINS
+****************
+- GIT
+- MAVEN INTIGRATOR
+- PIPELINE
+- ARTIFACTORY
+- DEPLOY TO CONTAINER
+- SONAR KUBE
+- PUBLISH OVER SSH
+
+
 [COMMANLY USED PLUGINS IN JENKINS](http://www.tothenew.com/blog/7-must-have-jenkins-plugins/)
 ********************************
 ```
