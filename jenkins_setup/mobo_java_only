@@ -1,0 +1,581 @@
+Authenticating with public key "Imported-Openssh-Key: C:\Users\user\Downloads\nv_rajendra.pem"
+     ┌────────────────────────────────────────────────────────────────────┐
+     │                        • MobaXterm 11.0 •                          │
+     │            (SSH client, X-server and networking tools)             │
+     │                                                                    │
+     │ ➤ SSH session to ec2-user@3.84.15.234                              │
+     │   • SSH compression : ✔                                            │
+     │   • SSH-browser     : ✔                                            │
+     │   • X11-forwarding  : ✘  (disabled or not supported by server)     │
+     │   • DISPLAY         : 192.168.1.8:0.0                              │
+     │                                                                    │
+     │ ➤ For more info, ctrl+click on help or visit our website           │
+     └────────────────────────────────────────────────────────────────────┘
+
+Last login: Tue Mar  5 11:07:14 2019 from 223.230.54.55
+
+       __|  __|_  )
+       _|  (     /   Amazon Linux 2 AMI
+      ___|\___|___|
+
+https://aws.amazon.com/amazon-linux-2/
+[ec2-user@ip-172-31-80-202 ~]$ sudo -i
+[root@ip-172-31-80-202 ~]# cd tmp
+-bash: cd: tmp: No such file or directory
+[root@ip-172-31-80-202 ~]# cd /tmp
+[root@ip-172-31-80-202 tmp]# ls
+jdk-8u201-linux-x64.rpm.filepart
+systemd-private-4899363daf054cb4b105b5dedb89ac7c-chronyd.service-EILsfO
+[root@ip-172-31-80-202 tmp]# top
+Tasks:  96 total,   1 running,  60 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.0 us,  0.0 sy,  0.0 ni,100.0 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st
+KiB Mem :  1009384 total,   267800 free,    67208 used,   674376 buff/cache
+KiB Swap:        0 total,        0 free,        0 used.   772868 avail Mem
+ Unknown command - try 'h' for help
+  PID USER      PR  NI    VIRT    RES    SHR S %CPU %MEM     TIME+ COMMAND
+    1 root      20   0  125548   5428   4052 S  0.0  0.5   0:01.60 systemd
+    2 root      20   0       0      0      0 S  0.0  0.0   0:00.00 kthreadd
+    4 root       0 -20       0      0      0 I  0.0  0.0   0:00.00 kworker/0:0H
+    5 root      20   0       0      0      0 I  0.0  0.0   0:00.06 kworker/u30+
+    6 root       0 -20       0      0      0 I  0.0  0.0   0:00.00 mm_percpu_wq
+    7 root      20   0       0      0      0 S  0.0  0.0   0:00.08 ksoftirqd/0
+    8 root      20   0       0      0      0 I  0.0  0.0   0:00.19 rcu_sched
+    9 root      20   0       0      0      0 I  0.0  0.0   0:00.00 rcu_bh
+   10 root      rt   0       0      0      0 S  0.0  0.0   0:00.00 migration/0
+   11 root      rt   0       0      0      0 S  0.0  0.0   0:00.01 watchdog/0
+   12 root      20   0       0      0      0 S  0.0  0.0   0:00.00 cpuhp/0
+   13 root      20   0       0      0      0 S  0.0  0.0   0:00.00 kdevtmpfs
+   14 root       0 -20       0      0      0 I  0.0  0.0   0:00.00 netns
+   20 root      20   0       0      0      0 S  0.0  0.0   0:00.00 xenbus
+   21 root      20   0       0      0      0 S  0.0  0.0   0:00.01 xenwatch
+  170 root      20   0       0      0      0 S  0.0  0.0   0:00.00 khungtaskd
+  171 root      20   0       0      0      0 S  0.0  0.0   0:00.00 oom_reaper
+  172 root       0 -20       0      0      0 I  0.0  0.0   0:00.00 writeback
+  174 root      20   0       0      0      0 S  0.0  0.0   0:00.00 kcompactd0
+  175 root      25   5       0      0      0 S  0.0  0.0   0:00.00 ksmd
+[root@ip-172-31-80-202 tmp]# ls
+jdk-8u201-linux-x64.rpm
+systemd-private-4899363daf054cb4b105b5dedb89ac7c-chronyd.service-EILsfO
+[root@ip-172-31-80-202 tmp]# rpm -ivh jdk-8u201-linux-x64.rpm
+warning: jdk-8u201-linux-x64.rpm: Header V3 RSA/SHA256 Signature, key ID ec551f03: NOKEY
+Preparing...                          ################################# [100%]
+Updating / installing...
+   1:jdk1.8-2000:1.8.0_201-fcs        ################################# [100%]
+Unpacking JAR files...
+        tools.jar...
+        plugin.jar...
+        javaws.jar...
+        deploy.jar...
+        rt.jar...
+        jsse.jar...
+        charsets.jar...
+        localedata.jar...
+[root@ip-172-31-80-202 tmp]# ls
+jdk-8u201-linux-x64.rpm
+systemd-private-4899363daf054cb4b105b5dedb89ac7c-chronyd.service-EILsfO
+[root@ip-172-31-80-202 tmp]# ls
+jdk-8u201-linux-x64.rpm
+systemd-private-4899363daf054cb4b105b5dedb89ac7c-chronyd.service-EILsfO
+[root@ip-172-31-80-202 tmp]# cd /opt/
+[root@ip-172-31-80-202 opt]# ls
+aws  java  rh
+[root@ip-172-31-80-202 opt]# cd
+[root@ip-172-31-80-202 ~]# cd /usr
+[root@ip-172-31-80-202 usr]# ls
+bin  games    java  lib64    local  share  tmp
+etc  include  lib   libexec  sbin   src
+[root@ip-172-31-80-202 usr]# which java
+/bin/java
+[root@ip-172-31-80-202 usr]# cd /bin/
+[root@ip-172-31-80-202 bin]# ls
+[                                   nl-classid-lookup
+a2p                                 nl-class-list
+ac                                  nl-cls-add
+addr2line                           nl-cls-delete
+alias                               nl-cls-list
+amazon-linux-extras                 nl-fib-lookup
+amazon-ssm-agent                    nl-link-enslave
+appletviewer                        nl-link-ifindex2name
+apropos                             nl-link-list
+ar                                  nl-link-name2ifindex
+arch                                nl-link-release
+as                                  nl-link-set
+at                                  nl-link-stats
+atq                                 nl-list-caches
+atrm                                nl-list-sockets
+attr                                nl-monitor
+aulast                              nl-neigh-add
+aulastlog                           nl-neigh-delete
+ausyscall                           nl-neigh-list
+auvirt                              nl-neightbl-list
+awk                                 nl-pktloc-lookup
+aws                                 nl-qdisc-add
+aws_completer                       nl-qdisc-delete
+base64                              nl-qdisc-list
+basename                            nl-route-add
+bash                                nl-route-delete
+bashbug                             nl-route-get
+bashbug-64                          nl-route-list
+batch                               nl-rule-list
+bc                                  nl-tctree-list
+bg                                  nl-util-addr
+blkiomon                            nm
+blkparse                            nohup
+blkrawverify                        nproc
+blktrace                            nroff
+bno_plot.py                         nsenter
+bond2team                           nslookup
+bootctl                             nsupdate
+btrace                              numfmt
+btrecord                            objcopy
+btreplay                            objdump
+btt                                 od
+bunzip2                             oldfind
+busctl                              on_ac_power
+bzcat                               open
+bzcmp                               openssl
+bzdiff                              openvt
+bzgrep                              orbd
+bzip2                               os-prober
+bzip2recover                        p11-kit
+bzless                              pack200
+bzmore                              package-cleanup
+c2ph                                passwd
+cal                                 paste
+ca-legacy                           pathchk
+captoinfo                           peekfd
+cat                                 perl
+catchsegv                           perl5.16.3
+catman                              perlbug
+cd                                  perldoc
+centrino-decode                     perlthanks
+certutil                            pgawk
+c++filt                             pgrep
+chacl                               pic
+chage                               piconv
+chardetect                          pidstat
+chattr                              pinentry
+chcon                               pinentry-curses
+chgrp                               ping
+chmem                               ping6
+chmod                               pinky
+chown                               pk12util
+chronyc                             pkg-config
+chrt                                pkill
+chvt                                pl2pm
+cifsiostat                          pldd
+cksum                               plymouth
+clear                               pmap
+cloud-init                          pm-is-supported
+cloud-init-per                      pod2html
+cmp                                 pod2man
+cmsutil                             pod2text
+col                                 pod2usage
+colcrt                              policytool
+colrm                               post-grohtml
+column                              powernow-k8-decode
+comm                                pr
+command                             preconv
+consolehelper                       pre-grohtml
+ControlPanel                        printenv
+coredumpctl                         printf
+cp                                  prlimit
+cpio                                prtstat
+cpupower                            ps
+crlutil                             psed
+crontab                             psfaddtable
+csh                                 psfgettable
+csplit                              psfstriptable
+csslint-0.6                         psfxtable
+curl                                pstree
+cut                                 pstree.x11
+date                                pstruct
+db_archive                          ptx
+db_checkpoint                       pwd
+db_deadlock                         pwdx
+db_dump                             pwmake
+db_dump185                          pwscore
+db_hotbackup                        pydoc
+db_load                             pyrsa-decrypt
+db_log_verify                       pyrsa-decrypt-2
+db_printlog                         pyrsa-decrypt-bigfile
+db_recover                          pyrsa-decrypt-bigfile-2
+db_replicate                        pyrsa-encrypt
+db_stat                             pyrsa-encrypt-2
+db_tuner                            pyrsa-encrypt-bigfile
+db_upgrade                          pyrsa-encrypt-bigfile-2
+dbus-cleanup-sockets                pyrsa-keygen
+dbus-daemon                         pyrsa-keygen-2
+dbus-monitor                        pyrsa-priv2pub
+dbus-run-session                    pyrsa-priv2pub-2
+dbus-send                           pyrsa-sign
+dbus-test-tool                      pyrsa-sign-2
+dbus-update-activation-environment  pyrsa-verify
+dbus-uuidgen                        pyrsa-verify-2
+db_verify                           pystache
+dc                                  pystache-test
+dd                                  python
+deallocvt                           python2
+debuginfo-install                   python2.7
+df                                  python2.7-config
+dgawk                               python2-config
+diff                                python-config
+diff3                               quota
+dig                                 quotasync
+dir                                 ranlib
+dircolors                           raw
+dirname                             rdate
+dmesg                               read
+dnsdomainname                       readelf
+domainname                          readlink
+dracut                              realpath
+du                                  recode-sr-latin
+dumpkeys                            red
+dwp                                 rename
+easy_install                        renice
+easy_install-2.7                    repoclosure
+ec2-metadata                        repodiff
+echo                                repo-graph
+ed                                  repomanage
+egrep                               repoquery
+eject                               repo-rss
+elfedit                             reposync
+enable-ec2-spot-hibernation         repotrack
+env                                 reset
+envsubst                            resizecons
+eqn                                 rev
+ex                                  rm
+expand                              rmail
+expr                                rmail.postfix
+extcheck                            rmdir
+factor                              rmic
+fallocate                           rmid
+false                               rmiregistry
+fc                                  rnano
+fg                                  rngtest
+fgconsole                           rpcgen
+fgrep                               rpm
+file                                rpm2cpio
+fincore                             rpmdb
+find                                rpmkeys
+find2perl                           rpmquery
+findmnt                             rpmverify
+find-repos-of-install               rst2html
+fipscheck                           rst2latex
+fipshmac                            rst2man
+flock                               rst2odt
+fmt                                 rst2odt_prepstyles
+fold                                rst2pseudoxml
+free                                rst2s5
+funzip                              rst2xetex
+gapplication                        rst2xml
+gawk                                rstpep2html
+gdbm_dump                           rsync
+gdbm_load                           rsyslog-recover-qi.pl
+gdbmtool                            runcon
+gdbus                               run-parts
+gencat                              rvi
+genl-ctrl-list                      rview
+geoiplookup                         rvim
+geoiplookup6                        s2p
+geoipupdate                         sadf
+geqn                                sar
+getconf                             schemagen
+getent                              scl
+getfacl                             scl_enabled
+getfattr                            scl_source
+getkeycodes                         scp
+getopt                              screen
+getopts                             script
+gettext                             scriptreplay
+gettext.sh                          sdiff
+gio                                 secon
+gio-querymodules-64                 sed
+glib-compile-schemas                seq
+gmake                               serialver
+gneqn                               servertool
+gnroff                              setarch
+gpasswd                             setfacl
+gpg                                 setfattr
+gpg2                                setfont
+gpg-agent                           setkeycodes
+gpgconf                             setleds
+gpg-connect-agent                   setmetamode
+gpg-error                           setpriv
+gpgparsemail                        setserial
+gpgsplit                            setsid
+gpgv                                setterm
+gpgv2                               setup
+gpg-zip                             setup-nsssysinit
+gpic                                setup-nsssysinit.sh
+gprof                               setvtrgb
+grep                                sftp
+groff                               sg
+grops                               sh
+grotty                              sha1sum
+groups                              sha224sum
+growpart                            sha256sum
+grub2-editenv                       sha384sum
+grub2-file                          sha512sum
+grub2-fstest                        show-changed-rco
+grub2-glue-efi                      showconsolefont
+grub2-kbdcomp                       show-installed
+grub2-menulst2cfg                   showkey
+grub2-mkfont                        shred
+grub2-mkimage                       shuf
+grub2-mklayout                      signtool
+grub2-mknetdir                      signver
+grub2-mkpasswd-pbkdf2               simc_lsmplugin
+grub2-mkrelpath                     sim_lsmplugin
+grub2-mkrescue                      size
+grub2-mkstandalone                  skill
+grub2-render-label                  slabtop
+grub2-script-check                  sleep
+grub2-syslinux2cfg                  slogin
+gsettings                           snice
+gsoelim                             soelim
+gtar                                sort
+gtbl                                sotruss
+gtroff                              splain
+gunzip                              split
+gzexe                               sprof
+gzip                                sqlite3
+h2ph                                ssh
+head                                ssh-add
+hexdump                             ssh-agent
+hibagent                            ssh-copy-id
+host                                ssh-keygen
+hostid                              ssh-keyscan
+hostname                            ssltap
+hostnamectl                         ssm-cli
+hunspell                            ssm-document-worker
+i386                                ssm-session-logger
+iconv                               ssm-session-worker
+id                                  stapbpf
+idiag-socket-details                stapdyn
+idlj                                stap-merge
+idn                                 stap-report
+idn2                                staprun
+igawk                               stapsh
+info                                stat
+infocmp                             stdbuf
+infokey                             strace
+infotocap                           strace-log-merge
+install                             strings
+ionice                              strip
+iostat                              stty
+ipcalc                              su
+ipcmk                               sudo
+ipcrm                               sudoedit
+ipcs                                sudoreplay
+iptables-xml                        sum
+isosize                             sync
+jar                                 systemctl
+jarsigner                           systemd-analyze
+java                                systemd-ask-password
+javac                               systemd-cat
+javadoc                             systemd-cgls
+javafxpackager                      systemd-cgtop
+javah                               systemd-coredumpctl
+javap                               systemd-delta
+javapackager                        systemd-detect-virt
+java-rmi.cgi                        systemd-escape
+javaws                              systemd-firstboot
+jcmd                                systemd-hwdb
+jconsole                            systemd-inhibit
+jcontrol                            systemd-loginctl
+jdb                                 systemd-machine-id-setup
+jdeps                               systemd-notify
+jhat                                systemd-nspawn
+jinfo                               systemd-path
+jjs                                 systemd-run
+jmap                                systemd-stdio-bridge
+jmc                                 systemd-sysv-convert
+jmc.ini                             systemd-tmpfiles
+jobs                                systemd-tty-ask-password-agent
+join                                tabs
+journalctl                          tac
+jp.py                               tail
+jp.py-2                             tapestat
+jp.py-2.7                           tar
+jps                                 taskset
+jrunscript                          tbl
+jsadebugd                           tcptraceroute
+jsonpointer                         tcsh
+json_reformat                       teamd
+jsonschema                          teamdctl
+json_verify                         teamnl
+jstack                              tee
+jstat                               test
+jstatd                              tic
+jvisualvm                           time
+kbdinfo                             timedatectl
+kbd_mode                            timeout
+kbdrate                             tload
+kernel-install                      tnameserv
+keyctl                              toe
+keytool                             top
+kill                                touch
+killall                             tput
+kmod                                tr
+last                                tracepath
+lastb                               tracepath6
+lastcomm                            traceroute
+lastlog                             traceroute6
+lchfn                               troff
+lchsh                               true
+ld                                  truncate
+ld.bfd                              trust
+ldd                                 tset
+ld.gold                             tsort
+less                                tty
+lessecho                            turbostat
+lesskey                             tzselect
+lesspipe.sh                         udevadm
+lexgrog                             ul
+link                                umask
+linux32                             umount
+linux64                             unalias
+linux-boot-prober                   uname
+ln                                  uname26
+loadkeys                            unexpand
+loadunimap                          unicode_start
+locale                              unicode_stop
+localectl                           uniq
+localedef                           unlink
+locate                              unlz4
+logger                              unpack200
+login                               unshare
+loginctl                            unxz
+logname                             unzip
+look                                unzipsfx
+ls                                  update-ca-trust
+lsattr                              updatedb
+lsblk                               update-mime-database
+lscpu                               uptime
+lsinitrd                            urlgrabber
+lsipc                               users
+lslocks                             usleep
+lslogins                            utmpdump
+lsmcli                              uuidgen
+lsmd                                vdir
+lsmem                               verify_blkparse
+lsns                                verifytree
+lua                                 vi
+luac                                view
+lz4                                 vim
+lz4c                                vimdiff
+lz4cat                              vimtutor
+machinectl                          vlock
+mailq                               vmstat
+mailq.postfix                       w
+make                                wait
+makedb                              wall
+man                                 watch
+mandb                               watchgnupg
+manpath                             wc
+mapscrn                             wdctl
+mcookie                             wget
+md5sum                              whatis
+mesg                                whereis
+mkdir                               which
+mkfifo                              whiptail
+mkinitrd                            who
+mknod                               whoami
+mktemp                              write
+modutil                             wsgen
+more                                wsimport
+mount                               x86_64
+mountpoint                          x86_energy_perf_policy
+mpstat                              xargs
+msgattrib                           xgettext
+msgcat                              xjc
+msgcmp                              xmlcatalog
+msgcomm                             xmllint
+msgconv                             xmlwf
+msgen                               xxd
+msgexec                             xz
+msgfilter                           xzcat
+msgfmt                              xzcmp
+msggrep                             xzdec
+msghack                             xzdiff
+msginit                             xzegrep
+msgmerge                            xzfgrep
+msgunfmt                            xzgrep
+msguniq                             xzless
+mv                                  xzmore
+namei                               yes
+nano                                ypdomainname
+native2ascii                        yum
+needs-restarting                    yum-builddep
+neqn                                yum-config-manager
+netstat                             yum-debug-dump
+newaliases                          yum-debug-restore
+newaliases.postfix                  yumdownloader
+newgrp                              yum-groups-manager
+nf-ct-add                           zcat
+nf-ct-list                          zcmp
+nf-exp-add                          zdiff
+nf-exp-delete                       zegrep
+nf-exp-list                         zfgrep
+nf-log                              zforce
+nf-monitor                          zgrep
+nf-queue                            zip
+nfsiostat-sysstat                   zipcloak
+ngettext                            zipgrep
+nice                                zipinfo
+nisdomainname                       zipnote
+nl                                  zipsplit
+nl-addr-add                         zless
+nl-addr-delete                      zmore
+nl-addr-list                        znew
+nl-class-add                        zsoelim
+nl-class-delete
+[root@ip-172-31-80-202 bin]# cd /usr
+[root@ip-172-31-80-202 usr]# ls
+bin  games    java  lib64    local  share  tmp
+etc  include  lib   libexec  sbin   src
+[root@ip-172-31-80-202 usr]# cd java/
+[root@ip-172-31-80-202 java]# ls
+default  jdk1.8.0_201-amd64  latest
+[root@ip-172-31-80-202 java]# cd jdk1.8.0_201-amd64/
+[root@ip-172-31-80-202 jdk1.8.0_201-amd64]# ls
+bin             lib          src.zip
+COPYRIGHT       LICENSE      THIRDPARTYLICENSEREADME-JAVAFX.txt
+include         man          THIRDPARTYLICENSEREADME.txt
+javafx-src.zip  README.html
+jre             release
+[root@ip-172-31-80-202 jdk1.8.0_201-amd64]# pwd
+/usr/java/jdk1.8.0_201-amd64
+[root@ip-172-31-80-202 jdk1.8.0_201-amd64]# cd /root/
+[root@ip-172-31-80-202 ~]# vi .bash_profile
+[root@ip-172-31-80-202 ~]# cat .bash_profile
+# .bash_profile
+
+# Get the aliases and functions
+if [ -f ~/.bashrc ]; then
+        . ~/.bashrc
+fi
+
+# User specific environment and startup programs
+
+PATH=$PATH:$HOME/bin
+JAVA_HOME=/usr/java/jdk1.8.0_201-amd64
+PATH=$JAVA_HOME/bin:$PATH
+export PATH
+[root@ip-172-31-80-202 ~]# cat $JAVA_HOME
+^C
+[root@ip-172-31-80-202 ~]# which java
+/bin/java
+[root@ip-172-31-80-202 ~]# java -version
+java version "1.8.0_201"
+Java(TM) SE Runtime Environment (build 1.8.0_201-b09)
+Java HotSpot(TM) 64-Bit Server VM (build 25.201-b09, mixed mode)
+[root@ip-172-31-80-202 ~]# echo $JAVA_HOME
+
+[root@ip-172-31-80-202 ~]# source .bash_profile
+[root@ip-172-31-80-202 ~]# echo $JAVA_HOME
+/usr/java/jdk1.8.0_201-amd64
+[root@ip-172-31-80-202 ~]# which java
+/usr/java/jdk1.8.0_201-amd64/bin/java
+[root@ip-172-31-80-202 ~]#
