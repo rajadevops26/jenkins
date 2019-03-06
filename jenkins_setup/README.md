@@ -26,7 +26,7 @@ source .bash_profile
 echo $JAVA_HOME
 which java
 ```
-https://github.com/rajadevops26/jenkins/blob/master/jenkins_setup/rpmjava.jpg
+![winscp_transfer_rpm](https://github.com/rajadevops26/jenkins/blob/master/jenkins_setup/rpmjava.jpg)
 *****************************************
 # jenkins install steps
 ```
