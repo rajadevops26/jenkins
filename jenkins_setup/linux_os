@@ -5,7 +5,7 @@ https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.
 Linux x64	168.05 MB  	jdk-8u201-linux-x64.rpm
 if u download the above rpm through wget it is not praperlly download and installed
 3)Through scp we can transfer the file on /tmp folder
-4)commands on linux
+4)commands on linux(https://docs.oracle.com/javase/8/docs/technotes/guides/install/linux_jdk.html#BJFJJEFG)
 which java
 java -version
 rpm -e java
@@ -25,8 +25,9 @@ source .bash_profile
 echo $JAVA_HOME
 which java
 [picture](https://github.com/rajadevops26/jenkins/blob/master/jenkins_setup/rpmjava.jpg)
-*****************************************
-jenkins install steps
+*******************************************************************************************************************
+                                          jenkins install steps
+*******************************************************************************************************************
 1)to know in which os, we are install the package 
 cat /etc/os-release
 2)os current state updation
@@ -45,4 +46,33 @@ rpm -ivh jenkins-2.138.1-1.1.noarch.rpm
 (or)
 yum install jenkins
 service jenkins status
+service jenkins stop
+service jenkins start
 
+**************************************************************************************************************************
+                                      MAVEN INSTALLATION STEPS
+*************************************************************************************************************************
+1)Goto apache maven website and copy the links
+https://maven.apache.org/download.cgi
+2) commands to do
+cd /opt
+wget http://mirrors.estointernet.in/apache/maven/maven-3/3.6.0/binaries/apache-maven-3.6.0-bin.tar.gz
+ls
+tar -xvzf apache-maven-3.6.0-bin.tar.gz
+ls
+mvn -v
+yum install maven
+mvn -v
+*******************************************************************************************************************************
+                                  TOMCAT INSTALLATION STEPS
+********************************************************************************************************************************
+1} Goto apacetomcat website and copy the link
+https://tomcat.apache.org/download-80.cgi
+2) select Binary Distributions------>> core ----->>on wbsite to copy the link
+3)then commands to do
+cd /opt
+wget http://mirrors.estointernet.in/apache/tomcat/tomcat-8/v8.5.38/bin/apache-tomcat-8.5.38.tar.gz
+tar -xvzf apache-tomcat-8.5.38.tar.gz
+ln -s /opt/apache-tomcat-8.5.38 /opt/tomcat8
+ln -s /opt/tomcat8/bin/startup.sh /usr/local/bin/up
+ln -s /opt/tomcat8/bin/shutdown.sh /usr/local/bin/down
