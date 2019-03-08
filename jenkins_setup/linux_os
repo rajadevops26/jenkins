@@ -76,3 +76,139 @@ tar -xvzf apache-tomcat-8.5.38.tar.gz
 ln -s /opt/apache-tomcat-8.5.38 /opt/tomcat8
 ln -s /opt/tomcat8/bin/startup.sh /usr/local/bin/up
 ln -s /opt/tomcat8/bin/shutdown.sh /usr/local/bin/down
+************************************** provoiding user credentials and roles for monitoring team*****************
+
+STEP1:-------------->>>>> GIVING ROLES AND AUTHONTICATIONS TO USERS
+cd /opt/tomcat8/conf
+vi tomcat-users.xml
+****************************************************************************************
+<?xml version="1.0" encoding="UTF-8"?>
+<tomcat-users xmlns="http://tomcat.apache.org/xml"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://tomcat.apache.org/xml tomcat-users.xsd"
+              version="1.0">
+  <role rolename="manager-gui"/>
+    <role rolename="manager-script"/>
+    <role rolename="manager-jmx"/>
+    <role rolename="manager-status"/>
+    <role rolename="admin"/>
+    <role rolename="admin-gui"/>
+    <user username="rajendra" password="yogi" roles="admin,manager-gui,manager-script,manager-jmx,manager-status,admin-gui"/>
+    <user username="admin" password="admin" roles="admin,manager-gui,manager-script,manager-jmx,manager-status,admin-gui"/>
+
+</tomcat-users>
+*****************************************************************************************
+STEP2:------------------------>>>> DISABLING LOCAL AUTHONTICATION OF TOMCAT SERVER ACCESS GIVES ON CURRENT IP for host-manager
+
+
+cd /opt/tomcat8/webapps/host-manager/META-INF
+
+vi context.xml
+
+**--------------------------------------------------------------------------------------**
+<?xml version="1.0" encoding="UTF-8"?>
+<Context antiResourceLocking="false" privileged="true" >
+<!--  <Valve className="org.apache.catalina.valves.RemoteAddrValve"
+         allow="127\.\d+\.\d+\.\d+|::1|0:0:0:0:0:0:0:1" />-->
+  <Manager sessionAttributeValueClassNameFilter="java\.lang\.(?:Boolean|Integer|Long|Number|String)|org\.apache\.catalina\.filters\.CsrfPreventionFilter\$LruCache(?:\$1)?|java\.util\.(?:Linked)?HashMap"/>
+</Context>
+*********------------------------------------------------------------------------------*********
+
+
+STEP3:-------------------------->>>>>>>>>DISEBLE LOCAL MANAGER AND ACCESS ONLY HOSTED ONE IP
+
+
+cd /opt/tomcat8/webapps/manager/META-INF
+
+vi context.xml
+**---------------------------------------------------------------------------------------------------**
+<?xml version="1.0" encoding="UTF-8"?>
+<Context antiResourceLocking="false" privileged="true" >
+<!--  <Valve className="org.apache.catalina.valves.RemoteAddrValve"
+         allow="127\.\d+\.\d+\.\d+|::1|0:0:0:0:0:0:0:1" />-->
+  <Manager sessionAttributeValueClassNameFilter="java\.lang\.(?:Boolean|Integer|Long|Number|String)|org\.apache\.catalina\.filters\.CsrfPreventionFilter\$LruCache(?:\$1)?|java\.util\.(?:Linked)?HashMap"/>
+</Context>
+***************--------------------------------------------------------------------------------*****************
+
+STEP4:---------------------------->>>>>>> TO CHANGE DEFAULT PORT TO YOUR OWN PORT
+
+
+cd /opt/tomcat8/conf
+vi server.xml
+
+(((((((((((((((((((((((((((((((((((((((((((((i changed 8080 connector port to 4091 only not touch anything ((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((
+
+<?xml version="1.0" encoding="UTF-8"?>
+<Server port="8005" shutdown="SHUTDOWN">
+  <Listener className="org.apache.catalina.startup.VersionLoggerListener" />
+  <Listener className="org.apache.catalina.core.AprLifecycleListener" SSLEngine="on" />
+  <Listener className="org.apache.catalina.core.JreMemoryLeakPreventionListener" />
+  <Listener className="org.apache.catalina.mbeans.GlobalResourcesLifecycleListener" />
+  <Listener className="org.apache.catalina.core.ThreadLocalLeakPreventionListener" />
+<GlobalNamingResources>
+  <Resource name="UserDatabase" auth="Container"
+              type="org.apache.catalina.UserDatabase"
+              description="User database that can be updated and saved"
+              factory="org.apache.catalina.users.MemoryUserDatabaseFactory"
+              pathname="conf/tomcat-users.xml" />
+</GlobalNamingResources>
+<Service name="Catalina">
+    <Connector port="4091" protocol="HTTP/1.1"
+               connectionTimeout="20000"
+               redirectPort="8443" />
+    <Connector port="8009" protocol="AJP/1.3" redirectPort="8443" />
+    <Engine name="Catalina" defaultHost="localhost">
+    <Realm className="org.apache.catalina.realm.LockOutRealm">
+    <Realm className="org.apache.catalina.realm.UserDatabaseRealm"
+               resourceName="UserDatabase"/>
+    </Realm>
+    <Host name="localhost"  appBase="webapps"
+            unpackWARs="true" autoDeploy="true">
+    <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs"
+               prefix="localhost_access_log" suffix=".txt"
+               pattern="%h %l %u %t &quot;%r&quot; %s %b" />
+
+      </Host>
+    </Engine>
+  </Service>
+</Server>
+
+
+
+
+((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((
+
+                                              STEP5: JUST WATCH WHAT INSIDE THE TOMACT XML FILES
+{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{
+
+cd /opt/tomcat8/conf
+vi context.xml
+
+<?xml version="1.0" encoding="UTF-8"?>
+<Context>
+    <WatchedResource>WEB-INF/web.xml</WatchedResource>
+    <WatchedResource>${catalina.base}/conf/web.xml</WatchedResource>
+</Context>
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+cd /opt/tomcat8/conf
+vi jaspic-providers.xml
+
+<?xml version="1.0" encoding="UTF-8"?>
+<jaspic-providers xmlns="http://tomcat.apache.org/xml"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="http://tomcat.apache.org/xml jaspic-providers.xsd"
+                  version="1.0">
+</jaspic-providers>
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+cd /opt/tomcat8/webapps/host-manager
+vi manager.xml
+
+<?xml version="1.0" encoding="UTF-8"?>
+<Context docBase="${catalina.home}/webapps/manager"
+         privileged="true" antiResourceLocking="false" >
+
+</Context>
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
