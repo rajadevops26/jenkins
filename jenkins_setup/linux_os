@@ -76,6 +76,11 @@ tar -xvzf apache-tomcat-8.5.38.tar.gz
 ln -s /opt/apache-tomcat-8.5.38 /opt/tomcat8
 ln -s /opt/tomcat8/bin/startup.sh /usr/local/bin/up
 ln -s /opt/tomcat8/bin/shutdown.sh /usr/local/bin/down
+
+        { or }
+alias start='/opt/tomcat8/bin/startup.sh'
+alias stop='/opt/tomcat8/bin/shutdown.sh'
+
 ************************************** provoiding user credentials and roles for monitoring team*****************
 
 STEP1:-------------->>>>> GIVING ROLES AND AUTHONTICATIONS TO USERS
