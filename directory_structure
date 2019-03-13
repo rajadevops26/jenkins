@@ -1,0 +1,377 @@
+     │
+     │ ➤ SSH session to ec2-user@3.84.235.176
+     │   • SSH compression : ✔
+     │   • SSH-browser     : ✔
+     │   • X11-forwarding  : ✘  (disabled or not supported by server)
+     │   • DISPLAY         : 192.168.1.7:0.0
+     │
+     │ ➤ For more info, ctrl+click on help or visit our website
+     └────────────────────────────────────────────────────────────────────
+
+Last login: Fri Mar  8 12:29:05 2019 from 223.230.105.32
+
+       __|  __|_  )
+       _|  (     /   Amazon Linux 2 AMI
+      ___|\___|___|
+
+https://aws.amazon.com/amazon-linux-2/
+6 package(s) needed for security, out of 8 available
+Run "sudo yum update" to apply all updates.
+[ec2-user@ip-172-31-80-202 ~]$ sudo -i
+[root@ip-172-31-80-202 ~]# clera
+-bash: clera: command not found
+[root@ip-172-31-80-202 ~]# clkear
+-bash: clkear: command not found
+[root@ip-172-31-80-202 ~]# clear
+[root@ip-172-31-80-202 ~]# cd /var/lib/jenkins/
+[root@ip-172-31-80-202 jenkins]# ls
+config.xml                                      nodes
+hudson.model.UpdateCenter.xml                   plugins
+hudson.plugins.git.GitTool.xml                  queue.xml.bak
+identity.key.enc                                secret.key
+jenkins.CLI.xml                                 secret.key.not-so-secret
+jenkins.install.InstallUtil.lastExecVersion     secrets
+jenkins.install.UpgradeWizard.state             updates
+jenkins.model.JenkinsLocationConfiguration.xml  userContent
+jobs                                            users
+logs                                            workflow-libs
+nodeMonitors.xml
+[root@ip-172-31-80-202 jenkins]# pwd
+/var/lib/jenkins
+[root@ip-172-31-80-202 jenkins]# top
+top - 11:34:25 up 51 min,  1 user,  load average: 0.00, 0.00, 0.00
+Tasks:  87 total,   2 running,  50 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.0 us,  0.0 sy,  0.0 ni,100.0 id,  0.0 wa,  0.0 hi,  0.0 si,  0
+KiB Mem :  1009384 total,   289368 free,   411088 used,   308928 buff/cach
+KiB Swap:        0 total,        0 free,        0 used.   436692 avail Mem
+
+  PID USER      PR  NI    VIRT    RES    SHR S %CPU %MEM     TIME+ COMMAND
+    1 root      20   0  117344   5260   3956 S  0.0  0.5   0:01.73 systemd
+    2 root      20   0       0      0      0 S  0.0  0.0   0:00.00 kthread
+    4 root       0 -20       0      0      0 I  0.0  0.0   0:00.00 kworker
+    5 root      20   0       0      0      0 I  0.0  0.0   0:00.01 kworker
+    6 root       0 -20       0      0      0 I  0.0  0.0   0:00.00 mm_perc
+    7 root      20   0       0      0      0 S  0.0  0.0   0:00.03 ksoftir
+    8 root      20   0       0      0      0 I  0.0  0.0   0:00.16 rcu_sch
+    9 root      20   0       0      0      0 I  0.0  0.0   0:00.00 rcu_bh
+   10 root      rt   0       0      0      0 S  0.0  0.0   0:00.00 migrati
+   11 root      rt   0       0      0      0 S  0.0  0.0   0:00.00 watchdo
+   12 root      20   0       0      0      0 S  0.0  0.0   0:00.00 cpuhp/0
+   13 root      20   0       0      0      0 S  0.0  0.0   0:00.00 kdevtmp
+   14 root       0 -20       0      0      0 I  0.0  0.0   0:00.00 netns
+   15 root      20   0       0      0      0 I  0.0  0.0   0:00.03 kworker
+   20 root      20   0       0      0      0 S  0.0  0.0   0:00.00 xenbus
+   21 root      20   0       0      0      0 S  0.0  0.0   0:00.01 xenwatc
+  170 root      20   0       0      0      0 S  0.0  0.0   0:00.00 khungta
+  171 root      20   0       0      0      0 S  0.0  0.0   0:00.00 oom_rea
+  172 root       0 -20       0      0      0 I  0.0  0.0   0:00.00 writeba
+[root@ip-172-31-80-202 jenkins]# LS
+-bash: LS: command not found
+[root@ip-172-31-80-202 jenkins]# ls
+config.xml                                      nodes
+hudson.model.UpdateCenter.xml                   plugins
+hudson.plugins.git.GitTool.xml                  queue.xml.bak
+identity.key.enc                                secret.key
+jenkins.CLI.xml                                 secret.key.not-so-secret
+jenkins.install.InstallUtil.lastExecVersion     secrets
+jenkins.install.UpgradeWizard.state             updates
+jenkins.model.JenkinsLocationConfiguration.xml  userContent
+jobs                                            users
+logs                                            workflow-libs
+nodeMonitors.xml
+[root@ip-172-31-80-202 jenkins]# cd jobs/
+[root@ip-172-31-80-202 jobs]# ls
+diffjobs1
+[root@ip-172-31-80-202 jobs]# cd ..
+[root@ip-172-31-80-202 jenkins]# cd logs
+[root@ip-172-31-80-202 logs]# ls
+slaves  tasks
+[root@ip-172-31-80-202 logs]# cd slaves/
+[root@ip-172-31-80-202 slaves]# ls
+ansible_node
+[root@ip-172-31-80-202 slaves]# cd ...
+-bash: cd: ...: No such file or directory
+[root@ip-172-31-80-202 slaves]# cd ..
+[root@ip-172-31-80-202 logs]# cd tasks/
+[root@ip-172-31-80-202 tasks]# ls
+Download metadata.log    Download metadata.log.2  Fingerprint cleanup.log
+Download metadata.log.1  Download metadata.log.3  Workspace clean-up.log
+[root@ip-172-31-80-202 tasks]# cd ..
+[root@ip-172-31-80-202 logs]# cd ..
+[root@ip-172-31-80-202 jenkins]# ls
+config.xml                                      nodes
+hudson.model.UpdateCenter.xml                   plugins
+hudson.plugins.git.GitTool.xml                  queue.xml.bak
+identity.key.enc                                secret.key
+jenkins.CLI.xml                                 secret.key.not-so-secret
+jenkins.install.InstallUtil.lastExecVersion     secrets
+jenkins.install.UpgradeWizard.state             updates
+jenkins.model.JenkinsLocationConfiguration.xml  userContent
+jobs                                            users
+logs                                            workflow-libs
+nodeMonitors.xml
+[root@ip-172-31-80-202 jenkins]# cd nodes
+[root@ip-172-31-80-202 nodes]# ls
+ansible_node
+[root@ip-172-31-80-202 nodes]# cd ..
+[root@ip-172-31-80-202 jenkins]# cd plugins/
+[root@ip-172-31-80-202 plugins]# ls
+ace-editor                              momentjs
+ace-editor.jpi                          momentjs.jpi
+ant                                     pam-auth
+antisamy-markup-formatter               pam-auth.jpi
+antisamy-markup-formatter.jpi           parameterized-trigger
+ant.jpi                                 parameterized-trigger.jpi
+apache-httpcomponents-client-4-api      pipeline-build-step
+apache-httpcomponents-client-4-api.jpi  pipeline-build-step.jpi
+authentication-tokens                   pipeline-github-lib
+authentication-tokens.jpi               pipeline-github-lib.jpi
+bouncycastle-api                        pipeline-graph-analysis
+bouncycastle-api.jpi                    pipeline-graph-analysis.jpi
+branch-api                              pipeline-input-step
+branch-api.jpi                          pipeline-input-step.jpi
+build-timeout                           pipeline-milestone-step
+build-timeout.jpi                       pipeline-milestone-step.jpi
+cloudbees-folder                        pipeline-model-api
+cloudbees-folder.jpi                    pipeline-model-api.jpi
+command-launcher                        pipeline-model-declarative-agent
+command-launcher.jpi                    pipeline-model-declarative-agent.j
+conditional-buildstep                   pipeline-model-definition
+conditional-buildstep.jpi               pipeline-model-definition.jpi
+credentials                             pipeline-model-extensions
+credentials-binding                     pipeline-model-extensions.jpi
+credentials-binding.jpi                 pipeline-rest-api
+credentials.jpi                         pipeline-rest-api.jpi
+display-url-api                         pipeline-stage-step
+display-url-api.jpi                     pipeline-stage-step.jpi
+docker-commons                          pipeline-stage-tags-metadata
+docker-commons.jpi                      pipeline-stage-tags-metadata.jpi
+docker-workflow                         pipeline-stage-view
+docker-workflow.jpi                     pipeline-stage-view.jpi
+durable-task                            plain-credentials
+durable-task.jpi                        plain-credentials.jpi
+email-ext                               resource-disposer
+email-ext.jpi                           resource-disposer.jpi
+git                                     run-condition
+git-client                              run-condition.jpi
+git-client.jpi                          scm-api
+github                                  scm-api.jpi
+github-api                              script-security
+github-api.jpi                          script-security.jpi
+github-branch-source                    ssh-credentials
+github-branch-source.jpi                ssh-credentials.jpi
+github.jpi                              ssh-slaves
+git.jpi                                 ssh-slaves.jpi
+git-server                              structs
+git-server.jpi                          structs.jpi
+gradle                                  subversion
+gradle.jpi                              subversion.jpi
+handlebars                              timestamper
+handlebars.jpi                          timestamper.jpi
+jackson2-api                            token-macro
+jackson2-api.jpi                        token-macro.jpi
+javadoc                                 workflow-aggregator
+javadoc.jpi                             workflow-aggregator.jpi
+jdk-tool                                workflow-api
+jdk-tool.jpi                            workflow-api.jpi
+jquery-detached                         workflow-basic-steps
+jquery-detached.jpi                     workflow-basic-steps.jpi
+jsch                                    workflow-cps
+jsch.jpi                                workflow-cps-global-lib
+junit                                   workflow-cps-global-lib.jpi
+junit.jpi                               workflow-cps.jpi
+ldap                                    workflow-durable-task-step
+ldap.jpi                                workflow-durable-task-step.jpi
+lockable-resources                      workflow-job
+lockable-resources.jpi                  workflow-job.jpi
+mailer                                  workflow-multibranch
+mailer.jpi                              workflow-multibranch.jpi
+mapdb-api                               workflow-scm-step
+mapdb-api.jpi                           workflow-scm-step.jpi
+matrix-auth                             workflow-step-api
+matrix-auth.jpi                         workflow-step-api.jpi
+matrix-project                          workflow-support
+matrix-project.jpi                      workflow-support.jpi
+maven-plugin                            ws-cleanup
+maven-plugin.jpi                        ws-cleanup.jpi
+[root@ip-172-31-80-202 plugins]# ls
+ace-editor                              momentjs
+ace-editor.jpi                          momentjs.jpi
+ant                                     pam-auth
+antisamy-markup-formatter               pam-auth.jpi
+antisamy-markup-formatter.jpi           parameterized-trigger
+ant.jpi                                 parameterized-trigger.jpi
+apache-httpcomponents-client-4-api      pipeline-build-step
+apache-httpcomponents-client-4-api.jpi  pipeline-build-step.jpi
+authentication-tokens                   pipeline-github-lib
+authentication-tokens.jpi               pipeline-github-lib.jpi
+bouncycastle-api                        pipeline-graph-analysis
+bouncycastle-api.jpi                    pipeline-graph-analysis.jpi
+branch-api                              pipeline-input-step
+branch-api.jpi                          pipeline-input-step.jpi
+build-timeout                           pipeline-milestone-step
+build-timeout.jpi                       pipeline-milestone-step.jpi
+cloudbees-folder                        pipeline-model-api
+cloudbees-folder.jpi                    pipeline-model-api.jpi
+command-launcher                        pipeline-model-declarative-agent
+command-launcher.jpi                    pipeline-model-declarative-agent.j
+conditional-buildstep                   pipeline-model-definition
+conditional-buildstep.jpi               pipeline-model-definition.jpi
+credentials                             pipeline-model-extensions
+credentials-binding                     pipeline-model-extensions.jpi
+credentials-binding.jpi                 pipeline-rest-api
+credentials.jpi                         pipeline-rest-api.jpi
+display-url-api                         pipeline-stage-step
+display-url-api.jpi                     pipeline-stage-step.jpi
+docker-commons                          pipeline-stage-tags-metadata
+docker-commons.jpi                      pipeline-stage-tags-metadata.jpi
+docker-workflow                         pipeline-stage-view
+docker-workflow.jpi                     pipeline-stage-view.jpi
+durable-task                            plain-credentials
+durable-task.jpi                        plain-credentials.jpi
+email-ext                               resource-disposer
+email-ext.jpi                           resource-disposer.jpi
+git                                     run-condition
+git-client                              run-condition.jpi
+git-client.jpi                          scm-api
+github                                  scm-api.jpi
+github-api                              script-security
+github-api.jpi                          script-security.jpi
+github-branch-source                    ssh-credentials
+github-branch-source.jpi                ssh-credentials.jpi
+github.jpi                              ssh-slaves
+git.jpi                                 ssh-slaves.jpi
+git-server                              structs
+git-server.jpi                          structs.jpi
+gradle                                  subversion
+gradle.jpi                              subversion.jpi
+handlebars                              timestamper
+handlebars.jpi                          timestamper.jpi
+jackson2-api                            token-macro
+jackson2-api.jpi                        token-macro.jpi
+javadoc                                 workflow-aggregator
+javadoc.jpi                             workflow-aggregator.jpi
+jdk-tool                                workflow-api
+jdk-tool.jpi                            workflow-api.jpi
+jquery-detached                         workflow-basic-steps
+jquery-detached.jpi                     workflow-basic-steps.jpi
+jsch                                    workflow-cps
+jsch.jpi                                workflow-cps-global-lib
+junit                                   workflow-cps-global-lib.jpi
+junit.jpi                               workflow-cps.jpi
+ldap                                    workflow-durable-task-step
+ldap.jpi                                workflow-durable-task-step.jpi
+lockable-resources                      workflow-job
+lockable-resources.jpi                  workflow-job.jpi
+mailer                                  workflow-multibranch
+mailer.jpi                              workflow-multibranch.jpi
+mapdb-api                               workflow-scm-step
+mapdb-api.jpi                           workflow-scm-step.jpi
+matrix-auth                             workflow-step-api
+matrix-auth.jpi                         workflow-step-api.jpi
+matrix-project                          workflow-support
+matrix-project.jpi                      workflow-support.jpi
+maven-plugin                            ws-cleanup
+maven-plugin.jpi                        ws-cleanup.jpi
+[root@ip-172-31-80-202 plugins]# cd ..
+[root@ip-172-31-80-202 jenkins]# ls
+config.xml                                      nodes
+hudson.model.UpdateCenter.xml                   plugins
+hudson.plugins.git.GitTool.xml                  queue.xml.bak
+identity.key.enc                                secret.key
+jenkins.CLI.xml                                 secret.key.not-so-secret
+jenkins.install.InstallUtil.lastExecVersion     secrets
+jenkins.install.UpgradeWizard.state             updates
+jenkins.model.JenkinsLocationConfiguration.xml  userContent
+jobs                                            users
+logs                                            workflow-libs
+nodeMonitors.xml
+[root@ip-172-31-80-202 jenkins]# cd secrets/
+[root@ip-172-31-80-202 secrets]# ls
+filepath-filters.d
+hudson.model.Job.serverCookie
+jenkins.model.Jenkins.crumbSalt
+master.key
+org.acegisecurity.ui.rememberme.TokenBasedRememberMeServices.mac
+org.jenkinsci.main.modules.instance_identity.InstanceIdentity.KEY
+slave-to-master-security-kill-switch
+whitelisted-callables.d
+[root@ip-172-31-80-202 secrets]# cd whitelisted-callables.d/
+[root@ip-172-31-80-202 whitelisted-callables.d]# ls
+default.conf
+[root@ip-172-31-80-202 whitelisted-callables.d]# cd ..
+[root@ip-172-31-80-202 secrets]# cd ..
+[root@ip-172-31-80-202 jenkins]# cd updates
+[root@ip-172-31-80-202 updates]# ls
+default.json                           hudson.tasks.Maven.MavenInstaller
+hudson.plugins.gradle.GradleInstaller  hudson.tools.JDKInstaller
+hudson.tasks.Ant.AntInstaller
+[root@ip-172-31-80-202 updates]# cd ..
+[root@ip-172-31-80-202 jenkins]# cd userContent/
+[root@ip-172-31-80-202 userContent]# ls
+readme.txt
+[root@ip-172-31-80-202 userContent]# cd users
+-bash: cd: users: No such file or directory
+[root@ip-172-31-80-202 userContent]# cd ..
+[root@ip-172-31-80-202 jenkins]# cd users/
+[root@ip-172-31-80-202 users]# ls
+admin
+[root@ip-172-31-80-202 users]# cd ..
+[root@ip-172-31-80-202 jenkins]# cd workflow-libs/
+[root@ip-172-31-80-202 workflow-libs]# ls
+[root@ip-172-31-80-202 workflow-libs]# cd ..
+[root@ip-172-31-80-202 jenkins]# ls
+config.xml                                      nodes
+hudson.model.UpdateCenter.xml                   plugins
+hudson.plugins.git.GitTool.xml                  queue.xml.bak
+identity.key.enc                                secret.key
+jenkins.CLI.xml                                 secret.key.not-so-secret
+jenkins.install.InstallUtil.lastExecVersion     secrets
+jenkins.install.UpgradeWizard.state             updates
+jenkins.model.JenkinsLocationConfiguration.xml  userContent
+jobs                                            users
+logs                                            workflow-libs
+nodeMonitors.xml
+[root@ip-172-31-80-202 jenkins]# cat config.xml
+<?xml version='1.1' encoding='UTF-8'?>
+<hudson>
+  <disabledAdministrativeMonitors/>
+  <version>2.138.1</version>
+  <installStateName>RUNNING</installStateName>
+  <numExecutors>2</numExecutors>
+  <mode>NORMAL</mode>
+  <useSecurity>true</useSecurity>
+  <authorizationStrategy class="hudson.security.FullControlOnceLoggedInAuttionStrategy">
+    <denyAnonymousReadAccess>true</denyAnonymousReadAccess>
+  </authorizationStrategy>
+  <securityRealm class="hudson.security.HudsonPrivateSecurityRealm">
+    <disableSignup>true</disableSignup>
+    <enableCaptcha>false</enableCaptcha>
+  </securityRealm>
+  <disableRememberMe>false</disableRememberMe>
+  <projectNamingStrategy class="jenkins.model.ProjectNamingStrategy$DefaulctNamingStrategy"/>
+  <workspaceDir>${JENKINS_HOME}/workspace/${ITEM_FULL_NAME}</workspaceDir>
+  <buildsDir>${ITEM_ROOTDIR}/builds</buildsDir>
+  <jdks/>
+  <viewsTabBar class="hudson.views.DefaultViewsTabBar"/>
+  <myViewsTabBar class="hudson.views.DefaultMyViewsTabBar"/>
+  <clouds/>
+  <scmCheckoutRetryCount>0</scmCheckoutRetryCount>
+  <views>
+    <hudson.model.AllView>
+      <owner class="hudson" reference="../../.."/>
+      <name>all</name>
+      <filterExecutors>false</filterExecutors>
+      <filterQueue>false</filterQueue>
+      <properties class="hudson.model.View$PropertyList"/>
+    </hudson.model.AllView>
+  </views>
+  <primaryView>all</primaryView>
+  <slaveAgentPort>-1</slaveAgentPort>
+  <label></label>
+  <crumbIssuer class="hudson.security.csrf.DefaultCrumbIssuer">
+    <excludeClientIPFromCrumb>false</excludeClientIPFromCrumb>
+  </crumbIssuer>
+  <nodeProperties/>
+  <globalNodeProperties/>
+[root@ip-172-31-80-202 jenkins]#
