@@ -23,3 +23,4 @@ USED PLUGINS
 7.Build Name Setter Plugin
 
 ```
+https://jenkins.io/doc/pipeline/tour/running-multiple-steps/
