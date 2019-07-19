@@ -24,3 +24,4 @@ USED PLUGINS
 
 ```
 https://jenkins.io/doc/pipeline/tour/running-multiple-steps/
+https://jenkins.io/doc/pipeline/examples/
