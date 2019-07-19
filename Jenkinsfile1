@@ -1,0 +1,63 @@
+pipeline {
+
+ 
+
+agent any
+
+
+stages {
+
+
+ 
+
+stage('Disksize') {
+ steps {
+   script {
+    def disk_size = sh(script: "df / --output=avail | tail -1", returnStdout: true).trim() as Integer
+    println("disk_size = ${disk_size}")
+           } } }
+
+stage('Filecreation') {
+steps {
+        sh 'touch dev.txt'
+	sh 'touch test'
+        sh 'ls -ltr'
+        sh 'pwd'
+
+      } }
+
+stage('Lsltr') {
+        steps {
+                echo 'Rajadevops'
+
+
+		sh([script: 'cat /etc/os-release'])
+                sh 'uname -r'
+                sh '''
+                    echo "Multiline shell steps works too"
+		    ls -ltr
+               '''
+		} }
+stage('Removefile') {
+     steps {
+          sh 'rm -rf /var/lib/jenkins/workspace/test/test'
+	  sh 'hostnamectl'
+	  
+           } }
+
+
+stage('Path') {
+
+  
+   steps {
+
+   
+		sh 'ifconfig'
+		sh 'uptime'
+		sh 'free -m'
+              
+           timeout(time: 3, unit: 'MINUTES') { sh 'pwd' }
+	} }
+}
+
+}
