@@ -60,7 +60,30 @@ wget http://mirrors.estointernet.in/apache/maven/maven-3/3.6.0/binaries/apache-m
 ls
 tar -xvzf apache-maven-3.6.0-bin.tar.gz
 ls
+mvn -v ----not shown need path 
+export PATH=/opt/apache-maven-3.6.0/bin:$PATH
 mvn -v
+(or)
+cd
+cat .bash_profile
+-------------------
+# .bash_profile
+# Get the aliases and functions
+if [ -f ~/.bashrc ]; then
+        . ~/.bashrc
+fi
+# User specific environment and startup programs
+PATH=$PATH:$HOME/bin
+export PATH
+JAVA_HOME=/usr/java/jdk1.8.0_211-amd64
+PATH=$JAVA_HOME/bin:$PATH
+ANSIBLE_HOME=/etc/ansible
+PATH=$ANSIBLE_HOME:$PATH
+MAVEN_HOME=/opt/maven
+PATH=$MAVEN_HOME/bin:$PATH
+------------------------------
+source .bash_profile
+(or)
 yum install maven
 mvn -v
 *******************************************************************************************************************************
